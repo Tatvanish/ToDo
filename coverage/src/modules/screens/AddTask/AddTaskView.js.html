@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/modules/screens/AddTask/AddTaskView.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\index.html">All files</a> / <a href="index.html">src/modules/screens/AddTask</a> AddTaskView.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.92% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>47/48</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">93.88% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>46/49</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">91.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>11/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.92% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>47/48</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">150x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">140x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">150x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import { View, Text, TextInput, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { connect } from 'react-redux';
+import _ from 'lodash';
+// import common styles, functions and static 
+import style from '../../../themes/css/styles';
+import { StaticText, colors } from '../../../themes/static/common';
+//custom component
+import Header from '../../../components/UserDefinedComponents/HeaderComponent';
+import CustomButton from '../../../components/UserDefinedComponents/Button';
+//services
+import * as AuthService from '../../../redux/AuthService';
+&nbsp;
+&nbsp;
+const currentDate = new Date();
+class AddTaskView extends Component {
+&nbsp;
+  static defaultProps = {
+    colorList: []
+  }
+  constructor(props) {
+    super(props);
+    this.state = {
+      userId: '',
+      taskTitle: '',
+      dueDate: '',
+      selectedColor: {},
+      taskTitleError: '',
+      dueDateError: '',
+      colorError: '',
+      status: 0,
+      colorList: [],
+    }
+  }
+  componentWillMount() {
+    if (this.props.colorList &amp;&amp; this.props.colorList.length &gt; 0 &amp;&amp; this.props.colorList !== "" &amp;&amp; this.props.colorList !== null &amp;&amp; this.props.colorList !== "undefined") {
+      let colors = JSON.parse(this.props.colorList);
+      this.setState({ colorList: colors });
+    } else {
+      this.props.dispatch(AuthService.getColorList());
+    }
+  }
+&nbsp;
+  componentWillReceiveProps(nextProps) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (nextProps.colorList &amp;&amp; nextProps.colorList.length &gt; 0 &amp;&amp; nextProps.colorList !== "" &amp;&amp; nextProps.colorList !== null &amp;&amp; nextProps.colorList !== "undefined") {
+      let colors = JSON.parse(nextProps.colorList);
+      this.setState({ colorList: colors });
+    }
+  }
+&nbsp;
+  componentDidMount() {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.props.user &amp;&amp; !_.isEmpty(this.props.user)) {
+      let user = JSON.parse(this.props.user);
+      this.setState({ userId: user.userId });
+    }
+  }
+&nbsp;
+  onClickSelectColor = (element) =&gt; {
+    element.isSelected = !element.isSelected;
+    this.setState({ selectedColor: element });
+  }
+&nbsp;
+  addTask = () =&gt; {
+    if (_.isEmpty(this.state.taskTitle) || this.state.taskTitle === "") {
+      let errorMessage = "Please enter task title";
+      this.state.taskTitleError = errorMessage;
+      this.setState({ taskTitleError: errorMessage });
+    } else {
+      this.state.taskTitleError = "";
+      this.setState({ taskTitleError: "" });
+    }
+    if (_.isEmpty(this.state.dueDate) || this.state.dueDate === "") {
+      let dateMessage = "Please select due date";
+      this.state.dueDateError = dateMessage;
+      this.setState({ dueDateError: dateMessage });
+    } else {
+      this.state.dueDateError = "";
+      this.setState({ dueDateError: "" });
+    }
+    if (this.state.selectedColor === "" || this.state.selectedColor === null) {
+      let colorMessage = "Please select color";
+      this.state.colorError = colorMessage;
+      this.setState({ colorError: colorMessage });
+    } else {
+      this.state.colorError = "";
+      this.setState({ colorError: "" });
+    }
+&nbsp;
+    if (_.isEmpty(this.state.taskTitleError) &amp;&amp; _.isEmpty(this.state.dueDateError)
+      &amp;&amp; (this.state.colorError === '' || <span class="branch-3 cbranch-no" title="branch not covered" >this.state.colorError === null)</span>) {
+      let addTaskData = {
+        userId: this.state.userId,
+        taskTitle: _.upperFirst(this.state.taskTitle),
+        dueDate: this.state.dueDate,
+        colors: this.state.selectedColor,
+        status: this.state.status
+      }
+      this.props.dispatch(AuthService.postTodoTask(this.props, addTaskData));
+      setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+          taskTitle: '',
+          dueDate: '',
+          selectedColor: {},
+          colorCode: ''
+        });
+      }, 2000);
+    } else {
+      console.log('this.state', this.state);
+    }
+  }
+&nbsp;
+  render() {
+    return (
+      &lt;View style={[style.wrapperContainer]}&gt;
+        &lt;Header headerTextLabel={StaticText.AddText} /&gt;
+        &lt;View style={[style.formStyle, { marginTop: 20 }]}&gt;
+          &lt;View style={{ marginBottom: 20 }}&gt;
+            &lt;View style={{
+              borderRadius: 3,
+              borderWidth: 1,
+              borderColor: colors.colorLine,
+              alignItems: 'flex-start',
+              backgroundColor: 'red'
+            }}&gt;
+              &lt;TextInput
+                placeholder={StaticText.TaskTitlePlaceHolder}
+                onChangeText={(taskTitle) =&gt; this.setState({ taskTitle: taskTitle })}
+                numberOfLines={4}
+                multiline={true}
+                maxLength={150}
+                value={this.state.taskTitle}
+                returnKeyType={'next'}
+                style={[style.textField, { textAlignVertical: 'top', height: 'auto' }]}
+                underlineColorAndroid={'transparent'}
+              /&gt;
+            &lt;/View&gt;
+            {this.state.taskTitleError.length &gt; 0 ? &lt;Text style={style.errorMessageStyle}&gt;{this.state.taskTitleError}&lt;/Text&gt; : &lt;View /&gt;}
+          &lt;/View&gt;
+&nbsp;
+          &lt;View style={{ marginBottom: 20 }}&gt;
+            &lt;View style={{
+              borderRadius: 3,
+              borderWidth: 1,
+              borderColor: colors.colorLine
+            }}&gt;
+              &lt;TextInput
+                placeholder={StaticText.DueDatePlaceHodler}
+                onChangeText={(dueDate) =&gt; this.setState({ dueDate: dueDate })}
+                numberOfLines={1}
+                multiline={true}
+                maxLength={10}
+                value={this.state.dueDate}
+                returnKeyType={'next'}
+                style={[style.textField, { textAlignVertical: 'top', height: 'auto' }]}
+                underlineColorAndroid={'transparent'}
+              /&gt;
+            &lt;/View&gt;
+            {this.state.dueDateError.length &gt; 0 ? &lt;Text style={style.errorMessageStyle}&gt;{this.state.dueDateError}&lt;/Text&gt; : &lt;View /&gt;}
+          &lt;/View&gt;
+          &lt;View style={styles.profileSection}&gt;
+            &lt;View style={styles.colorStyle}&gt;
+              {this.state.colorList &amp;&amp; this.state.colorList.length &gt; 0
+                &amp;&amp; this.state.colorList.map((element, index) =&gt; {
+                  if (this.state.selectedColor.colorId == element.colorId) {
+                    element.isSelected = true;
+                  } else {
+                    element.isSelected = false;
+                  }
+                  return (
+                    &lt;TouchableOpacity key={index} onPress={() =&gt; { this.onClickSelectColor(element); }} style={[styles.colorButton, { backgroundColor: element.colorCode }]}&gt;
+                      {(element.isSelected === true) ? (
+                        &lt;Image style={styles.checkImageStyle}
+                          source={{ uri: 'https://www.clipartmax.com/png/middle/172-1725454_check-mark-computer-icons-clip-art-green-checkmark-icon-png.png' }} /&gt;
+                      ) : (
+                          &lt;View /&gt;
+                        )}
+                    &lt;/TouchableOpacity&gt;
+                  )
+                })}
+            &lt;/View&gt;
+            {this.state.colorError.length &gt; 0 ? &lt;Text style={style.errorMessageStyle}&gt;{this.state.colorError}&lt;/Text&gt; : &lt;View /&gt;}
+          &lt;/View&gt;
+          &lt;View style={{ width: '100%' }}&gt;
+            &lt;CustomButton btnTextLabel={StaticText.AddText} onPress={this.addTask} /&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+    );
+  }
+}
+&nbsp;
+export default connect()(AddTaskView);
+&nbsp;
+const styles = StyleSheet.create({
+  profileSection: {
+    width: '100%',
+    padding: 10,
+  },
+  colorButton: {
+    width: 50, height: 50, borderRadius: 50 / 2,
+    opacity: 0.3
+  },
+  colorStyle: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%'
+  },
+  checkImageStyle: {
+    alignItems: 'center', resizeMode: 'contain', width: '100%', height: '100%'
+  }
+});
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Feb 08 2019 17:36:08 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+{
+  "name": "TodoApp",
+  "keywords": [
+    "React Native",
+    "Todo",
+    "Redux"
+  ],
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src test",
+    "coverage": "rimraf coverage && jest --coverage",
+    "version": "support/version-ios.sh"
+  },
+  "jest": {
+    "preset": "react-native",
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
+    ],
+    "setupFiles": [
+      "<rootDir>/test/setup.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation)"
+    ]
+  },
+  "dependencies": {
+    "bluebird": "^3.3.5",
+    "event-emitter": "^0.3.4",
+    "immutable": "^3.8.2",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "prop-types": "^15.6.0",
+    "react": "16.3.1",
+    "react-native": "0.55.4",
+    "react-native-datepicker": "^1.7.2",
+    "react-native-google-signin": "^0.12.0",
+    "react-native-oauth": "^2.1.18",
+    "react-native-simple-toast": "0.0.8",
+    "react-native-swipeout": "^2.3.4",
+    "react-native-vector-icons": "^4.4.2",
+    "react-navigation": "^2.5.3",
+    "react-navigation-redux-helpers": "^2.0.5",
+    "react-redux": "^5.0.6",
+    "realm": "^2.15.3",
+    "redux": "^3.4.0",
+    "redux-logger": "^2.6.1",
+    "redux-loop-symbol-ponyfill": "^2.2.0",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.0.1",
+    "standard-http-error": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.5",
+    "babel-jest": "23.2.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-react-native": "4.0.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^5.0.1",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-react": "^7.10.0",
+    "fetch-mock": "^6.4.4",
+    "istanbul": "^0.4.5",
+    "jest": "^23.2.0",
+    "plop": "^2.0.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.4.1",
+    "react-native-mock": "~0.3.1",
+    "react-test-renderer": "~16.4.1",
+    "remote-redux-devtools": "^0.5.13",
+    "rimraf": "^2.6.2"
+  }
+}
