@@ -51,21 +51,21 @@ describe('TODO VIEW ', () => {
       taskId: 1,
       taskTitle: "abc",
       dueDate: "2019-02-06 17:32:00",
-      colors: { colorId: 5, colorCode: '#80D320' },
+      colors: { colorId: 1, colorCode: '#80D320' },
       status: true
     },
     {
       taskId: 2,
       taskTitle: "xyz",
       dueDate: "2019-02-06 17:32:00",
-      colors: { colorId: 1, colorCode: '#4A90E2' },
+      colors: { colorId: 2, colorCode: '#4A90E2' },
       status: false
     },
     {
       taskId: 3,
       taskTitle: "pqr",
       dueDate: "2019-02-08 17:32:00",
-      colors: { colorId: 2, colorCode: '#80D320' },
+      colors: { colorId: 1, colorCode: '#80D320' },
       status: false
     }
   ]

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import DatePicker from 'react-native-datepicker';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 // import common styles, functions and static 
@@ -144,23 +143,16 @@ class AddTaskView extends Component {
               borderWidth: 1,
               borderColor: colors.colorLine
             }}>
-              <DatePicker
-                style={{
-                  width: '100%',
-                  borderWidth: 0,
-                }}
-                date={this.state.dueDate}
-                mode="datetime"
+              <TextInput
                 placeholder={StaticText.DueDatePlaceHodler}
-                format="YYYY-MM-DD HH:mm:ss"
-                minDate={currentDate}
-                confirmBtnText="Confirm"
-                cancelBtnText="Cancel"
-                showIcon={false}
-                customStyles={{
-                  dateInput: { alignItems: 'flex-start', paddingLeft: 10, borderWidth: 0 }
-                }}
-                onDateChange={(dueDate) => this.setState({ dueDate: dueDate })}
+                onChangeText={(dueDate) => this.setState({ dueDate: dueDate })}
+                numberOfLines={1}
+                multiline={true}
+                maxLength={10}
+                value={this.state.dueDate}
+                returnKeyType={'next'}
+                style={[style.textField, { textAlignVertical: 'top', height: 'auto' }]}
+                underlineColorAndroid={'transparent'}
               />
 
             </View>
