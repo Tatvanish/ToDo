@@ -28,12 +28,13 @@ class TodoView extends Component {
   componentWillMount() {
     if (this.props.user && !_.isEmpty(this.props.user)) {
       let user = JSON.parse(this.props.user);
-      let todo = JSON.parse(this.props.todo)
-
+      this.props.dispatch(AuthService.getTodoList(user.userId));
       this.state.userId = user.userId;
       this.setState({ userId: user.userId });
-      this.props.dispatch(AuthService.getTodoList(user.userId));
-      this.setState({ dataSource: this.state.dataSource.cloneWithRows(todo) });
+      if (this.props.todo) {
+        let todo = JSON.parse(this.props.todo)
+        this.setState({ dataSource: this.state.dataSource.cloneWithRows(todo) });
+      }
     }
   }
 

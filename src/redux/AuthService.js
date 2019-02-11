@@ -153,6 +153,7 @@ export const resetTo = (props, route) => {
 };
 
 export async function setUsers(userData) {
+  console.warn("setusers")
   let userArr = [];
   try {
     let userId = users.length + 1;
@@ -183,7 +184,6 @@ export const postLogin = (props, loginData) => {
     let userData = '';
     dispatch(setLoader(true));
     let users = await getUserList();
-    console.log('users--->', users);
     if (users && !_.isEmpty(users) && users !== null && users !== 'undefined') {
       let list = JSON.parse(users);
       let index = list.map(e => e.name).indexOf(loginData.name);
@@ -191,13 +191,15 @@ export const postLogin = (props, loginData) => {
         let user = list[index];
         dispatch(loginSuccess(user));
         dispatch(resetTo(props, 'AuthNavigator'));
-      } else {
-        userData = setUsers(loginData);
+      }
+      else {
+        userData = await setUsers(loginData);
         dispatch(setUserSuccess(userData));
         dispatch(postLogin(props, loginData));
       }
-    } else {
-      userData = setUsers(loginData);
+    }
+    else {
+      userData = await setUsers(loginData);
       dispatch(setUserSuccess(userData));
       dispatch(postLogin(props, loginData));
     }
