@@ -100,7 +100,7 @@ class TodoView extends Component {
         <Swipeout left={swipeLeftBtn} right={swipeRightBtn} autoClose={true} close={true} backgroundColor={'transparent'}>
           <View key={item.taskId} style={styles.row}>
             <View style={{ flexDirection: 'row', flex: 1, alignItems: 'center' }}>
-              <View style={[styles.button, { backgroundColor: colors.colorRed }]} />
+              <View style={[styles.button, { backgroundColor: item.colors.colorId ? item.colors.colorCode : colors.colorRed }]} />
               <View style={{ marginLeft: 20 }}>
                 <Text style={(item.status === true) ? styles.strikeText : styles.boldText}>{item.taskTitle}</Text>
                 <Text style={(item.status === true) ? styles.grayText : styles.text}> Due {item.dueDate}</Text>
