@@ -1,5 +1,5 @@
 ![Todo App](/docs/todo.png?v=2)
-React Native + Redux + AsyncStorage
+React Native + Redux + Realm
 ===
 
 Todo App - make your task management easily, Anyone can login and add their task with different color selection and complete and delete task using swipe.
