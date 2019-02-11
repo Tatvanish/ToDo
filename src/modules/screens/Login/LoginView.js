@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput, Image, KeyboardAvoidingView, Platform, } from 'react-native';
+import { View, Text, TextInput, Image, KeyboardAvoidingView, Platform, SafeAreaView } from 'react-native';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 // import common styles and static 
@@ -56,7 +56,7 @@ class LoginView extends Component {
     } else {
       return (
         <KeyboardAvoidingView style={style.wrapperContainer} behavior={this.state.behavior} keyboardVerticalOffset={60}>
-          <View style={[style.wrapperContainer]}>
+          <SafeAreaView style={[style.wrapperContainer]}>
             <View style={{ height: '50%', width: '100%', alignItems: 'center', justifyContent: 'flex-end' }}>
               <View style={[style.imageThumbnail]}>
                 <Image style={style.imageThumb} source={{ uri: 'https://www.vub.sk/images/vubweb/ikonky/security_gdpr_g.png' }} />
@@ -89,7 +89,7 @@ class LoginView extends Component {
 
               </View>
             </View>
-          </View>
+          </SafeAreaView>
         </KeyboardAvoidingView>
       );
     }
