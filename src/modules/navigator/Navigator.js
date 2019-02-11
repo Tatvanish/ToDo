@@ -72,7 +72,8 @@ export const TodoTabNavigator = createBottomTabNavigator({
         backgroundColor: colors.colorWhite,
         alignSelf: 'center',
         paddingLeft: 40,
-        paddingRight: 40
+        paddingRight: 40,
+        height: 80
       },
       animationEnabled: false,
       swipeEnabled: false,
