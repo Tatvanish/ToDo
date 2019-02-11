@@ -59,7 +59,7 @@ class LoginView extends Component {
           <View style={[style.wrapperContainer]}>
             <View style={{ height: '50%', width: '100%', alignItems: 'center', justifyContent: 'flex-end' }}>
               <View style={[style.imageThumbnail]}>
-                <Image style={style.imageThumb} source={{ uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' }} />
+                <Image style={style.imageThumb} source={{ uri: 'https://www.vub.sk/images/vubweb/ikonky/security_gdpr_g.png' }} />
               </View>
               <Text style={style.blackText}>Todo</Text>
             </View>
